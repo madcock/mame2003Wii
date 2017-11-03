@@ -99,8 +99,8 @@ CPUS+=H6280@
 #CPUS+=I188@
 #CPUS+=I286@
 #CPUS+=V20@
-#CPUS+=V30@
-#CPUS+=V33@
+CPUS+=V30@
+CPUS+=V33@
 #CPUS+=V60@
 #CPUS+=V70@
 CPUS+=I8035@
@@ -138,7 +138,7 @@ CPUS+=TMS34020@
 #CPUS+=TMS99105A@
 #CPUS+=TMS99110A@
 #CPUS+=Z8000@
-#CPUS+=TMS32010@
+CPUS+=TMS32010@
 #CPUS+=TMS32025@
 #CPUS+=TMS32031@
 #CPUS+=CCPU@
@@ -216,7 +216,7 @@ SOUNDS+=K054539@
 #SOUNDS+=C140@
 #SOUNDS+=QSOUND@
 #SOUNDS+=SAA1099@
-#SOUNDS+=IREMGA20@
+SOUNDS+=IREMGA20@
 #SOUNDS+=ES5505@
 #SOUNDS+=ES5506@
 SOUNDS+=BSMT2000@
@@ -252,6 +252,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/machine/konamigx_machine.c $(CORE_DIR)/vidhrdw/konamigx_vidhrdw.c $(CORE_DIR)/drivers/konamigx.c \
 				 $(CORE_DIR)/vidhrdw/konamiic.c \
 				 $(CORE_DIR)/vidhrdw/tmnt_vidhrdw.c $(CORE_DIR)/drivers/tmnt.c \
+				 $(CORE_DIR)/machine/decocrpt.c $(CORE_DIR)/machine/decoprot.c \
 				 $(CORE_DIR)/vidhrdw/cninja_vidhrdw.c $(CORE_DIR)/drivers/cninja.c \
 				 $(CORE_DIR)/vidhrdw/xmen_vidhrdw.c $(CORE_DIR)/drivers/xmen.c \
 				 $(CORE_DIR)/vidhrdw/circusc_vidhrdw.c $(CORE_DIR)/drivers/circusc.c \
@@ -260,6 +261,12 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/mystwarr_vidhrdw.c $(CORE_DIR)/drivers/mystwarr.c \
 				 $(CORE_DIR)/vidhrdw/toki_vidhrdw.c $(CORE_DIR)/drivers/toki.c \
 				 $(CORE_DIR)/sndhrdw/seibu.c \
+				 $(CORE_DIR)/machine/irem_cpu.c \
+				 $(CORE_DIR)/vidhrdw/m92_vidhrdw.c $(CORE_DIR)/drivers/m92.c \
+				 $(CORE_DIR)/vidhrdw/m72_vidhrdw.c $(CORE_DIR)/sndhrdw/m72_sndhrdw.c $(CORE_DIR)/drivers/m72.c \
+				 $(CORE_DIR)/vidhrdw/taitoic.c $(CORE_DIR)/sndhrdw/taitosnd.c \
+				 $(CORE_DIR)/vidhrdw/taito_f2_vidhrdw.c $(CORE_DIR)/drivers/taito_f2.c \
+				 $(CORE_DIR)/machine/toaplan1_machine.c $(CORE_DIR)/vidhrdw/toaplan1_vidhrdw.c $(CORE_DIR)/drivers/toaplan1.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c
 
 # List of CPU core (and, for a debug build, disassembler) object files

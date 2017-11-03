@@ -142,7 +142,7 @@ else ifeq ($(platform), wii)
     
    CC = $(DEVKITPPC)/bin/powerpc-eabi-gcc$(EXE_EXT)
    AR = $(DEVKITPPC)/bin/powerpc-eabi-ar$(EXE_EXT)
-   PLATCFLAGS += -DGEKKO -mrvl -mcpu=750 -meabi -mhard-float -D__ppc__ -D__POWERPC__ -Dstricmp=strcasecmp
+   PLATCFLAGS += -DGEKKO -mrvl -mcpu=750 -meabi -mhard-float -D__ppc__ -D__POWERPC__ -Dstricmp=strcasecmp -fsigned-char
    STATIC_LINKING = 1
 else ifeq ($(platform), ps3)
    TARGET = $(TARGET_NAME)_libretro_ps3.a

@@ -1228,14 +1228,18 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( rtype2 )	/* (c) 1989 */
 	DRIVER( rtype2j )	/* (c) 1989 (Japan) */
 	DRIVER( majtitle )	/* (c) 1990 (Japan) */
+#endif
 	DRIVER( hharry )	/* (c) 1990 (World) */
 	DRIVER( hharryu )	/* (c) 1990 Irem America (US) */
+#if 0
 	DRIVER( dkgensan )	/* (c) 1990 (Japan) */
 	DRIVER( dkgenm72 )	/* (c) 1990 (Japan) */
 	DRIVER( poundfor )	/* (c) 1990 (World) */
 	DRIVER( poundfou )	/* (c) 1990 Irem America (US) */
 	DRIVER( airduel )	/* (c) 1990 (Japan) */
+#endif   
 	DRIVER( cosmccop )	/* (c) 1991 (World) */
+#if 0
 	DRIVER( gallop )	/* (c) 1991 (Japan) */
 	DRIVER( kengo )		/* (c) 1991 */
 	/* not M72, but same sound hardware */
@@ -1270,8 +1274,10 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( majtitl2 )	/* (c) 1992 Irem (World) */
 	DRIVER( skingame )	/* (c) 1992 Irem America (US) */
 	DRIVER( skingam2 )	/* (c) 1992 Irem America (US) */
+#endif
 	DRIVER( hook )		/* (c) 1992 Irem (World) */
 	DRIVER( hooku )		/* (c) 1992 Irem America (US) */
+#if 0
 	DRIVER( rtypeleo )	/* (c) 1992 Irem (World) */
 	DRIVER( rtypelej )	/* (c) 1992 Irem (Japan) */
 	DRIVER( inthunt )	/* (c) 1993 Irem (World) */
@@ -1614,8 +1620,10 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( camltrua )	/* C38 (c) 1989 Taito America Corporation (US) */
 	DRIVER( cameltrj )	/* C38 (c) 1989 Taito Corporation (Japan) */
 	DRIVER( qtorimon )	/* C41 (c) 1990 Taito Corporation (Japan) */
+#endif
 	DRIVER( liquidk )	/* C49 (c) 1990 Taito Corporation Japan (World) */
 	DRIVER( liquidku )	/* C49 (c) 1990 Taito America Corporation (US) */
+#if 0
 	DRIVER( mizubaku )	/* C49 (c) 1990 Taito Corporation (Japan) */
 	DRIVER( quizhq )	/* C53 (c) 1990 Taito Corporation (Japan) */
 	DRIVER( ssi )		/* C64 (c) 1990 Taito Corporation Japan (World) */
@@ -1765,8 +1773,10 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( hellfire )	/* TP-??? (c) 1989 Toaplan + Taito license */
 	DRIVER( hellfir1 )	/* TP-??? (c) 1989 Toaplan + Taito license */
 	DRIVER( zerowing )	/* TP-015 (c) 1989 Toaplan */
+#endif
 	DRIVER( demonwld )	/* TP-016 (c) 1990 Toaplan (+ Taito license when set to Japan) */
 	DRIVER( demonwl1 )	/* TP-016 (c) 1989 Toaplan + Taito license */
+#if 0
 	DRIVER( fireshrk )	/* TP-017 (c) 1990 Toaplan */
 	DRIVER( samesame )	/* TP-017 (c) 1989 Toaplan */
 	DRIVER( samesam2 )	/* TP-017 (c) 1989 Toaplan */
@@ -2894,9 +2904,11 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( hippodrm )	/* (c) 1989 Data East USA (US) */
 	DRIVER( ffantasy )	/* (c) 1989 Data East Corporation (Japan) */
 	DRIVER( ffantasa )	/* (c) 1989 Data East Corporation (Japan) */
+#endif
 	DRIVER( slyspy )	/* (c) 1989 Data East USA (US) */
 	DRIVER( slyspy2 )	/* (c) 1989 Data East USA (US) */
 	DRIVER( secretag )	/* (c) 1989 Data East Corporation (World) */
+#if 0
 	DRIVER( secretab )	/* bootleg */
 	DRIVER( midres )	/* (c) 1989 Data East Corporation (World) */
 	DRIVER( midresu )	/* (c) 1989 Data East USA (US) */
@@ -2927,10 +2939,12 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( mutantf )	/* MAF (c) 1992 Data East Corporation (World) */
 	DRIVER( mutantfa )	/* MAF (c) 1992 Data East Corporation (World) */
 	DRIVER( deathbrd )	/* MAF (c) 1992 Data East Corporation (Japan) */
+#endif   
 	DRIVER( cninja )	/* MAG (c) 1991 Data East Corporation (World) */
 	DRIVER( cninja0 )	/* MAG (c) 1991 Data East Corporation (World) */
 	DRIVER( cninjau )	/* MAG (c) 1991 Data East Corporation (US) */
 	DRIVER( joemac )	/* MAG (c) 1991 Data East Corporation (Japan) */
+#if 0   
 	DRIVER( stoneage )	/* bootleg */
 #endif	
 	DRIVER( robocop2 )	/* MAH (c) 1991 Data East Corporation (World) */
