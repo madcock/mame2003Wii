@@ -1269,7 +1269,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( thndblst )	/* (c) 1991 Irem (Japan) */
 	DRIVER( uccops )	/* (c) 1992 Irem (World) */
 	DRIVER( uccopsj )	/* (c) 1992 Irem (Japan) */
+#endif
 	DRIVER( mysticri )	/* (c) 1992 Irem (World) */
+#if 0
 	DRIVER( gunhohki )	/* (c) 1992 Irem (Japan) */
 	DRIVER( majtitl2 )	/* (c) 1992 Irem (World) */
 	DRIVER( skingame )	/* (c) 1992 Irem America (US) */
