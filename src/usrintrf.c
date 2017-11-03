@@ -767,7 +767,7 @@ void ui_drawbox(struct mame_bitmap *bitmap, int leftx, int topy, int width, int 
 static void drawbar(struct mame_bitmap *bitmap, int leftx, int topy, int width, int height, int percentage, int default_percentage)
 {
 	struct rectangle bounds, tbounds;
-	UINT32 black, white;
+	UINT32 white;
 
 	/* make a rect and orient/clip it */
 	bounds.min_x = uirotbounds.min_x + leftx;
@@ -777,7 +777,6 @@ static void drawbar(struct mame_bitmap *bitmap, int leftx, int topy, int width, 
 	sect_rect(&bounds, &uirotbounds);
 
 	/* pick colors from the colortable */
-	black = uirotfont->colortable[0];
 	white = uirotfont->colortable[1];
 
 	/* draw the top default percentage marker */

@@ -3529,13 +3529,12 @@ void drawgfx_toggle_crosshair(void)
 
 void draw_crosshair(struct mame_bitmap *bitmap,int x,int y,const struct rectangle *clip)
 {
-	unsigned short black,white;
+	unsigned short white;
 	int i;
 
 	if (!crosshair_enable)
 		return;
 
-	black = Machine->uifont->colortable[0];
 	white = Machine->uifont->colortable[1];
 
 	for (i = 1;i < 6;i++)
