@@ -106,12 +106,12 @@ CPUS+=V33@
 CPUS+=I8035@
 CPUS+=I8039@
 #CPUS+=I8048@
-#CPUS+=N7751@
+CPUS+=N7751@
 #CPUS+=I8X41@
 #CPUS+=M6800@
 #CPUS+=M6801@
 #CPUS+=M6802@
-#CPUS+=M6803@
+CPUS+=M6803@
 CPUS+=M6808@
 #CPUS+=HD63701@
 #CPUS+=NSC8105@
@@ -181,8 +181,8 @@ SOUNDS+=YM2151_ALT@
 SOUNDS+=YM2610@
 #SOUNDS+=YM2610B@
 #SOUNDS+=YM2612@
-#SOUNDS+=YM3438@
-#SOUNDS+=YM2413@
+SOUNDS+=YM3438@
+SOUNDS+=YM2413@
 SOUNDS+=YM3812@
 #SOUNDS+=YMZ280B@
 #SOUNDS+=YM3526@
@@ -210,8 +210,8 @@ SOUNDS+=K007232@
 #SOUNDS+=K051649@
 SOUNDS+=K053260@
 SOUNDS+=K054539@
-#SOUNDS+=SEGAPCM@
-#SOUNDS+=RF5C68@
+SOUNDS+=SEGAPCM@
+SOUNDS+=RF5C68@
 #SOUNDS+=CEM3394@
 #SOUNDS+=C140@
 #SOUNDS+=QSOUND@
@@ -259,14 +259,20 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/machine/simpsons_machine.c $(CORE_DIR)/vidhrdw/simpsons_vidhrdw.c $(CORE_DIR)/drivers/simpsons.c \
 				 $(CORE_DIR)/vidhrdw/moo_vidhrdw.c $(CORE_DIR)/drivers/moo.c \
 				 $(CORE_DIR)/vidhrdw/mystwarr_vidhrdw.c $(CORE_DIR)/drivers/mystwarr.c \
+				 $(CORE_DIR)/vidhrdw/cabal_vidhrdw.c $(CORE_DIR)/drivers/cabal.c \
 				 $(CORE_DIR)/vidhrdw/toki_vidhrdw.c $(CORE_DIR)/drivers/toki.c \
 				 $(CORE_DIR)/sndhrdw/seibu.c \
 				 $(CORE_DIR)/machine/irem_cpu.c \
 				 $(CORE_DIR)/vidhrdw/m92_vidhrdw.c $(CORE_DIR)/drivers/m92.c \
 				 $(CORE_DIR)/vidhrdw/m72_vidhrdw.c $(CORE_DIR)/sndhrdw/m72_sndhrdw.c $(CORE_DIR)/drivers/m72.c \
+				 $(CORE_DIR)/sndhrdw/irem.c \
+				 $(CORE_DIR)/vidhrdw/mpatrol_vidhrdw.c $(CORE_DIR)/drivers/mpatrol.c \
 				 $(CORE_DIR)/vidhrdw/taitoic.c $(CORE_DIR)/sndhrdw/taitosnd.c \
 				 $(CORE_DIR)/vidhrdw/taito_f2_vidhrdw.c $(CORE_DIR)/drivers/taito_f2.c \
 				 $(CORE_DIR)/machine/toaplan1_machine.c $(CORE_DIR)/vidhrdw/toaplan1_vidhrdw.c $(CORE_DIR)/drivers/toaplan1.c \
+				 $(CORE_DIR)/machine/system16_machine.c $(CORE_DIR)/vidhrdw/system16_vidhrdw.c $(CORE_DIR)/vidhrdw/sys16spr.c \
+				 $(CORE_DIR)/sndhrdw/system16_sndhrdw.c \
+				 $(CORE_DIR)/drivers/system16.c $(CORE_DIR)/drivers/aburner.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c
 
 # List of CPU core (and, for a debug build, disassembler) object files

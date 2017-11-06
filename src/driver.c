@@ -1176,7 +1176,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( redalert )	/* (c) 1981 + "GDI presents" */
 	DRIVER( demoneye )	/* (c) 1981 */
 	DRIVER( olibochu )	/* M47 (c) 1981 + "GDI presents" */
+#endif
 	DRIVER( mpatrol )	/* M52 (c) 1982 */
+#if 0
 	DRIVER( mpatrolw )	/* M52 (c) 1982 + Williams license */
 	DRIVER( troangel )	/* (c) 1983 */
 	DRIVER( yard )		/* (c) 1983 */
@@ -1282,8 +1284,10 @@ const struct GameDriver *test_drivers[] =
 #if 0
 	DRIVER( rtypeleo )	/* (c) 1992 Irem (World) */
 	DRIVER( rtypelej )	/* (c) 1992 Irem (Japan) */
+#endif
 	DRIVER( inthunt )	/* (c) 1993 Irem (World) */
 	DRIVER( inthuntu )	/* (c) 1993 Irem (US) */
+#if 0
 	DRIVER( kaiteids )	/* (c) 1993 Irem (Japan) */
 	DRIVER( nbbatman )	/* (c) 1993 Irem America (US) */
 	DRIVER( leaguemn )	/* (c) 1993 Irem (Japan) */
@@ -2505,7 +2509,9 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( shdancbl )	/* (c) 1989 (but bootleg) */
 	DRIVER( shdancer )	/* (c) 1989 */
 	DRIVER( shdancrj )	/* (c) 1989 */
+#endif
 	DRIVER( shinobi )	/* (c) 1987 */
+#if 0
 	DRIVER( shinobl )	/* (c) 1987 (but bootleg) */
 	DRIVER( tetrisbl )	/* (c) 1988 (but bootleg) */
 	DRIVER( timscanr )	/* (c) 1987 */
@@ -2892,8 +2898,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 /* the following ones all run on similar hardware */
 	DRIVER( hbarrel )	/* (c) 1987 Data East USA (US) */
 	DRIVER( hbarrelw )	/* (c) 1987 Data East Corporation (World) */
+#endif
 	DRIVER( baddudes )	/* (c) 1988 Data East USA (US) */
 	DRIVER( drgninja )	/* (c) 1988 Data East Corporation (Japan) */
+#if 0
 	DRIVER( birdtry )	/* (c) 1988 Data East Corporation (Japan) */
 #endif	
 	DRIVER( robocop )	/* (c) 1988 Data East Corporation (World) */
@@ -4280,9 +4288,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	Senku							(c) 1997
 
 */
-
+#endif
 	/* Tad games (Tad games run on Seibu hardware) */
 	DRIVER( cabal )		/* (c) 1988 Tad + Fabtek license */
+#if 0
 	DRIVER( cabal2 )	/* (c) 1988 Tad + Fabtek license */
 	DRIVER( cabalbl )	/* bootleg */
 #endif
