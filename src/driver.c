@@ -1208,7 +1208,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( spelunkr )	/* (c) 1985 licensed from Broderbund */
 	DRIVER( spelnkrj )	/* (c) 1985 licensed from Broderbund */
 	DRIVER( spelunk2 )	/* (c) 1986 licensed from Broderbund */
+#endif
 	DRIVER( horizon )	/* (c) 1985 */
+#if 0
 	DRIVER( youjyudn )	/* (c) 1986 (Japan) */
 
 	DRIVER( vigilant )	/* (c) 1988 (World) */
@@ -1289,7 +1291,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( inthuntu )	/* (c) 1993 Irem (US) */
 #if 0
 	DRIVER( kaiteids )	/* (c) 1993 Irem (Japan) */
+#endif
 	DRIVER( nbbatman )	/* (c) 1993 Irem America (US) */
+#if 0
 	DRIVER( leaguemn )	/* (c) 1993 Irem (Japan) */
 	DRIVER( ssoldier )	/* (c) 1993 Irem America (US) */
 	DRIVER( psoldier )	/* (c) 1993 Irem (Japan) */
@@ -2486,9 +2490,11 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( fantzono )	/* (c) 1986 */
 	DRIVER( fpointbl )	/* (c) 1989 (Datsu bootleg) */
 	DRIVER( fpointbj )	/* (c) 1989 (Datsu bootleg, Japan) */
+#endif
 	DRIVER( goldnabl )	/* (c) 1989 (bootleg) */
 	DRIVER( goldnaxa )	/* (c) 1989 */
 	DRIVER( goldnaxe )	/* (c) 1989 */
+#if 0
 	DRIVER( hangon )	/* (c) 1985 */
 	DRIVER( hwchamp )	/* (c) 1987 */
 	DRIVER( mjleague )	/* (c) 1985 */
@@ -2941,9 +2947,11 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( darkseaj )	/* MAC (c) 1990 Data East Corporation (Japan) */
 	DRIVER( gatedoom )	/* MAC (c) 1990 Data East Corporation (US) */
 	DRIVER( gatedom1 )	/* MAC (c) 1990 Data East Corporation (US) */
+#endif
 	DRIVER( edrandy )	/* MAD (c) 1990 Data East Corporation (World) */
 	DRIVER( edrandy1 )	/* MAD (c) 1990 Data East Corporation (World) */
 	DRIVER( edrandyj )	/* MAD (c) 1990 Data East Corporation (Japan) */
+#if 0   
 	DRIVER( supbtime )	/* MAE (c) 1990 Data East Corporation (World) */
 	DRIVER( supbtimj )	/* MAE (c) 1990 Data East Corporation (Japan) */
 	DRIVER( mutantf )	/* MAF (c) 1992 Data East Corporation (World) */
@@ -3146,11 +3154,13 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( jackalj )	/* GX631 (c) 1986 (Japan) */
 	DRIVER( topgunbl )	/* bootleg */
 	DRIVER( ddribble )	/* GX690 (c) 1986 */
+#endif
 	DRIVER( contra )	/* GX633 (c) 1987 */
 	DRIVER( contrab )	/* bootleg */
 	DRIVER( contraj )	/* GX633 (c) 1987 (Japan) */
 	DRIVER( contrajb )	/* bootleg */
 	DRIVER( gryzor )	/* GX633 (c) 1987 */
+#if 0
 	DRIVER( combasc )	/* GX611 (c) 1988 */
 	DRIVER( combasct )	/* GX611 (c) 1987 */
 	DRIVER( combascj )	/* GX611 (c) 1987 (Japan) */
@@ -3178,8 +3188,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( ajax )		/* GX770 (c) 1987 */
 	DRIVER( typhoon )	/* GX770 (c) 1987 */
 	DRIVER( ajaxj )		/* GX770 (c) 1987 (Japan) */
+#endif
 	DRIVER( scontra )	/* GX775 (c) 1988 */
 	DRIVER( scontraj )	/* GX775 (c) 1988 (Japan) */
+#if 0
 	DRIVER( thunderx )	/* GX873 (c) 1988 */
 	DRIVER( thnderxj )	/* GX873 (c) 1988 (Japan) */
 	DRIVER( mainevt )	/* GX799 (c) 1988 */
@@ -3330,10 +3342,8 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( buckyua )	/* GX173 (c) 1992 (US) */
 #if 0
 	DRIVER( gaiapols )	/* GX123 (c) 1993 (Japan) */
-#endif	
 	DRIVER( mystwarr )	/* GX128 (c) 1993 (World) */
 	DRIVER( mystwaru )	/* GX128 (c) 1993 (US) */
-#if 0	
 	DRIVER( viostorm )	/* GX168 (c) 1993 (Europe) */
 	DRIVER( viostrmu )	/* GX168 (c) 1993 (US) */
 	DRIVER( viostrmj )	/* GX168 (c) 1993 (Japan) */
@@ -4150,11 +4160,13 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( nbajamt2 )	/* (c) 1994 Midway */
 	DRIVER( nbajamt3 )	/* (c) 1994 Midway */
 	DRIVER( revx )		/* (c) 1994 Midway */
+#endif
 	DRIVER( mk3 )		/* (c) 1994 Midway */
 	DRIVER( mk3r20 )	/* (c) 1994 Midway */
 	DRIVER( mk3r10 )	/* (c) 1994 Midway */
 	DRIVER( umk3 )		/* (c) 1994 Midway */
 	DRIVER( umk3r11 )	/* (c) 1994 Midway */
+#if 0
 	DRIVER( wwfmania )	/* (c) 1995 Midway */
 	DRIVER( openice )	/* (c) 1995 Midway */
 	DRIVER( nbahangt )	/* (c) 1996 Midway */
@@ -4291,10 +4303,8 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 #endif
 	/* Tad games (Tad games run on Seibu hardware) */
 	DRIVER( cabal )		/* (c) 1988 Tad + Fabtek license */
-#if 0
 	DRIVER( cabal2 )	/* (c) 1988 Tad + Fabtek license */
 	DRIVER( cabalbl )	/* bootleg */
-#endif
 	DRIVER( toki )		/* (c) 1989 Tad (World) */
 	DRIVER( tokia )		/* (c) 1989 Tad (World) */
 	DRIVER( tokij )		/* (c) 1989 Tad (Japan) */
@@ -4556,8 +4566,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	/* Kaneko "AX System" games */
 	DRIVER( berlwall )	/* (c) 1991 Kaneko */
 	DRIVER( berlwalt )	/* (c) 1991 Kaneko */
+#endif
 	DRIVER( mgcrystl )	/* (c) 1991 Kaneko (World) */
 	DRIVER( mgcrystj )	/* (c) 1991 Kaneko + distributed by Atlus (Japan) */
+#if 0
 	DRIVER( blazeon )	/* (c) 1992 Atlus */
 	DRIVER( sandscrp )	/* (c) 1992 Face */
 	DRIVER( bakubrkr )
