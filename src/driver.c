@@ -2525,8 +2525,10 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( tturf )		/* (c) 1989 Sega / Sunsoft */
 	DRIVER( tturfbl )	/* (c) 1989 (Datsu bootleg) */
 	DRIVER( tturfu )	/* (c) 1989 Sega / Sunsoft */
+#endif
 	DRIVER( wb3 )		/* (c) 1988 Sega / Westone */
 	DRIVER( wb3bl )		/* (c) 1988 Sega / Westone (but bootleg) */
+#if 0
 	DRIVER( wrestwar )	/* (c) 1989 */
 
 /*

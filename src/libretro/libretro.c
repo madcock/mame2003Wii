@@ -148,17 +148,11 @@ void retro_get_system_info(struct retro_system_info *info)
 int sample_rate = 48000;
 
 void retro_get_system_av_info(struct retro_system_av_info *info)
-{
-    const int orientation = drivers[driverIndex]->flags & ORIENTATION_MASK;
-    const bool rotated = ((orientation == ROT90) || (orientation == ROT270));
-    
-    const int width = rotated ? videoConfig.height : videoConfig.width;
-    const int height = rotated ? videoConfig.width : videoConfig.height;
-
-    info->geometry.base_width = width;
-    info->geometry.base_height = height;
-    info->geometry.max_width = width;
-    info->geometry.max_height = height;
+{   
+    info->geometry.base_width = videoConfig.width;
+    info->geometry.base_height = videoConfig.height;
+    info->geometry.max_width = videoConfig.width;
+    info->geometry.max_height = videoConfig.height;
     info->geometry.aspect_ratio = (float)videoConfig.aspect_x / (float)videoConfig.aspect_y;
     info->timing.fps = Machine->drv->frames_per_second;
     info->timing.sample_rate = sample_rate;
@@ -276,9 +270,6 @@ bool retro_load_game(const struct retro_game_info *game)
     if(driverIndex)
     {
         fallbackDir = strdup(game->path);
-        int orientation;
-        unsigned rotateMode;
-        static const int uiModes[] = {ROT0, ROT90, ROT180, ROT270};
         
         /* Get system directory from frontend */
         environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY,&systemDir);
@@ -302,19 +293,8 @@ bool retro_load_game(const struct retro_game_info *game)
         romDir = normalizePath(fallbackDir);
         romDir = peelPathItem(romDir);
 
-        // Setup Rotation
-        orientation = drivers[driverIndex]->flags & ORIENTATION_MASK;
-        rotateMode = 0;
-        
-        rotateMode = (orientation == ROT270) ? 1 : rotateMode;
-        rotateMode = (orientation == ROT180) ? 2 : rotateMode;
-        rotateMode = (orientation == ROT90) ? 3 : rotateMode;
-        
-        environ_cb(RETRO_ENVIRONMENT_SET_ROTATION, &rotateMode);
-
         // Set all options before starting the game
         options.samplerate = sample_rate;
-        options.ui_orientation = uiModes[rotateMode];
         options.vector_intensity = 1.5f;
         options.skip_disclaimer = skip_disclaimer;
         options.skip_warnings = skip_warnings;
