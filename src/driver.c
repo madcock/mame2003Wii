@@ -1223,8 +1223,10 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( rtypeu )	/* (c) 1987 + Nintendo USA license (US) */
 	DRIVER( bchopper )	/* (c) 1987 */
 	DRIVER( mrheli )	/* (c) 1987 (Japan) */
+#endif
 	DRIVER( nspirit )	/* (c) 1988 */
 	DRIVER( nspiritj )	/* (c) 1988 (Japan) */
+#if 0
 	DRIVER( imgfight )	/* (c) 1988 (Japan) */
 	DRIVER( loht )		/* (c) 1989 */
 	DRIVER( xmultipl )	/* (c) 1989 (Japan) */
@@ -1264,16 +1266,19 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( riskchal )
 	DRIVER( gussun )
 	DRIVER( shisen2 )
+#endif
 	/* M92 */
 	DRIVER( gunforce )	/* (c) 1991 Irem (World) */
 	DRIVER( gunforcu )	/* (c) 1991 Irem America (US) */
 	DRIVER( gunforcj )	/* (c) 1991 Irem (Japan) */
+#if 0
 	DRIVER( bmaster )	/* (c) 1991 Irem */
 	DRIVER( lethalth )	/* (c) 1991 Irem (World) */
 	DRIVER( thndblst )	/* (c) 1991 Irem (Japan) */
-	DRIVER( uccops )	/* (c) 1992 Irem (World) */
-	DRIVER( uccopsj )	/* (c) 1992 Irem (Japan) */
 #endif
+	DRIVER( uccops )	/* (c) 1992 Irem (World) */
+        DRIVER( uccopsar )	/* (c) 1992 Irem (World) */
+	DRIVER( uccopsj )	/* (c) 1992 Irem (Japan) */
 	DRIVER( mysticri )	/* (c) 1992 Irem (World) */
 #if 0
 	DRIVER( gunhohki )	/* (c) 1992 Irem (Japan) */
@@ -1283,10 +1288,8 @@ const struct GameDriver *test_drivers[] =
 #endif
 	DRIVER( hook )		/* (c) 1992 Irem (World) */
 	DRIVER( hooku )		/* (c) 1992 Irem America (US) */
-#if 0
 	DRIVER( rtypeleo )	/* (c) 1992 Irem (World) */
 	DRIVER( rtypelej )	/* (c) 1992 Irem (Japan) */
-#endif
 	DRIVER( inthunt )	/* (c) 1993 Irem (World) */
 	DRIVER( inthuntu )	/* (c) 1993 Irem (US) */
 #if 0
@@ -1298,7 +1301,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( ssoldier )	/* (c) 1993 Irem America (US) */
 	DRIVER( psoldier )	/* (c) 1993 Irem (Japan) */
 	DRIVER( dsccr94j )	/* (c) 1994 Irem (Japan) */
+#endif
 	DRIVER( gunforc2 )	/* (c) 1994 Irem */
+#if 0
 	DRIVER( geostorm )	/* (c) 1994 Irem (Japan) */
 	/* M107 */
 	DRIVER( firebarr )	/* (c) 1993 Irem (Japan) */
@@ -1563,9 +1568,11 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( nastar )	/* B81 (c) 1988 Taito Corporation Japan (World) */
 	DRIVER( nastarw )	/* B81 (c) 1988 Taito America Corporation (US) */
 	DRIVER( rastsag2 )	/* B81 (c) 1988 Taito Corporation (Japan) */
+#endif
 	DRIVER( rambo3 )	/* B93 (c) 1989 Taito Europe Corporation (Europe) */
 	DRIVER( rambo3ae )	/* B93 (c) 1989 Taito Europe Corporation (Europe) */
 	DRIVER( rambo3a )	/* B93 (c) 1989 Taito America Corporation (US) */
+#if 0
 	DRIVER( crimec )	/* B99 (c) 1989 Taito Corporation Japan (World) */
 	DRIVER( crimecu )	/* B99 (c) 1989 Taito America Corporation (US) */
 	DRIVER( crimecj )	/* B99 (c) 1989 Taito Corporation (Japan) */
@@ -2485,7 +2492,9 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( dumpmtmt )	/* (c) 1986 (Japan) */
 	DRIVER( endurob2 )	/* (c) 1985 (Beta bootleg) */
 	DRIVER( endurobl )	/* (c) 1985 (Herb bootleg) */
+#endif
 	DRIVER( eswatbl )	/* (c) 1989 (but bootleg) */
+#if 0
 	DRIVER( fantzone )	/* (c) 1986 */
 	DRIVER( fantzono )	/* (c) 1986 */
 	DRIVER( fpointbl )	/* (c) 1989 (Datsu bootleg) */

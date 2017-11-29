@@ -179,7 +179,7 @@ SOUNDS+=YM2203@
 SOUNDS+=YM2151_ALT@
 #SOUNDS+=YM2608@
 SOUNDS+=YM2610@
-#SOUNDS+=YM2610B@
+SOUNDS+=YM2610B@
 #SOUNDS+=YM2612@
 SOUNDS+=YM3438@
 SOUNDS+=YM2413@
@@ -271,6 +271,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/mpatrol_vidhrdw.c $(CORE_DIR)/drivers/mpatrol.c \
 				 $(CORE_DIR)/vidhrdw/m62_vidhrdw.c $(CORE_DIR)/drivers/m62.c \
 				 $(CORE_DIR)/vidhrdw/taitoic.c $(CORE_DIR)/sndhrdw/taitosnd.c \
+				 $(CORE_DIR)/vidhrdw/taito_b_vidhrdw.c $(CORE_DIR)/drivers/taito_b.c \
 				 $(CORE_DIR)/vidhrdw/taito_f2_vidhrdw.c $(CORE_DIR)/drivers/taito_f2.c \
 				 $(CORE_DIR)/machine/toaplan1_machine.c $(CORE_DIR)/vidhrdw/toaplan1_vidhrdw.c $(CORE_DIR)/drivers/toaplan1.c \
 				 $(CORE_DIR)/machine/system16_machine.c $(CORE_DIR)/vidhrdw/system16_vidhrdw.c $(CORE_DIR)/vidhrdw/sys16spr.c \

@@ -2096,7 +2096,7 @@ ROM_START( splatter )
 	ROM_LOAD( "sh1_snd0.bin",       0x0c000, 0x10000, CRC(90abd4ad) SHA1(caeba5befcf57d90671786c7ef1ce49d54821949) )
 	ROM_LOAD( "sh1_snd1.bin",       0x1c000, 0x10000, CRC(8ece9e0a) SHA1(578da932a7684c6f633dde1d6412011c727c2380) )
 
-	ROM_REGION( 0x100000, REGION_USER1, 0 ) /* 1M for ROMs */
+	ROM_REGION( 0x400000, REGION_USER1, 0 ) /* 1M for ROMs */
 	ROM_LOAD_HS( "sh1_prg7.bin",    0x00000, 0x10000, CRC(24c8cbd7) SHA1(72a2f008840b1b5cf026dd51e2797d87d92040fd) )
 	ROM_LOAD_HS( "sh1_prg6.bin",    0x20000, 0x10000, CRC(97a3e664) SHA1(397907cedea1cd9ae25427df5d41b942933c3ca9) )
 	ROM_LOAD_HS( "sh1_prg5.bin",    0x40000, 0x10000, CRC(0187de9a) SHA1(9b6c5bbdb81fb5cbb9a93b2b6d2358711dfded31) )
@@ -2108,10 +2108,9 @@ ROM_START( splatter )
 
 	ROM_REGION( 0x14000, REGION_USER2, 0 )  /* 80k for RAM */
 
-	ROM_REGION( 0x90000, REGION_CPU4, 0 )       /* the MCU & voice */
+	ROM_REGION( 0xd0000, REGION_CPU4, 0 )       /* the MCU & voice */
 	ROM_LOAD( "ns1-mcu.bin",        0x0f000, 0x01000, CRC(ffb5c0bd) SHA1(7a38c0cc2553c627f4ec507fb6e807cf7d537c02) )
-	ROM_LOAD( "sh_voi-0.bin",       0x20000, 0x10000, CRC(2199cb66) SHA1(f1c4e3fb0e7c6eae50c698cded8c85a3cbd36672) )
-	ROM_CONTINUE(                   0x10000, 0x10000 )
+	ROM_LOAD( "sh_voi-0.bin",       0x10000, 0x20000, CRC(2199cb66) SHA1(f1c4e3fb0e7c6eae50c698cded8c85a3cbd36672) )
 	ROM_LOAD( "sh_voi-1.bin",       0x30000, 0x20000, CRC(9b6472af) SHA1(b7cde805a4d25f9c332c2c13ffa474e683ec76d5) )
 	ROM_LOAD( "sh_voi-2.bin",       0x50000, 0x20000, CRC(25ea75b6) SHA1(aafebbdddf4a2924d9e5a850ffb6861cb5c4a769) )
 	ROM_LOAD( "sh_voi-3.bin",       0x70000, 0x20000, CRC(5eebcdb4) SHA1(973e95a49cb1dda14e4c61580501c997fc7bc015) )
@@ -2692,7 +2691,7 @@ GAME( 1988, beraboho, berabohm, ns1,     berabohm,berabohm, ROT0,   "Namco", "Be
 GAME( 1988, mmaze,    0,        ns1,     mmaze,   alice,    ROT0,   "Namco", "Marchen Maze (Japan)" )
 GAME( 1988, bakutotu, 0,        bakutotu,bakutotu,bakutotu, ROT0,   "Namco", "Bakutotsu Kijuutei" )
 GAME( 1988, wldcourt, 0,        ns1,     wldcourt,wldcourt, ROT0,   "Namco", "World Court (Japan)" )
-GAME( 1988, splatter, 0,        ns1,     splatter,splatter, ROT0,   "Namco", "Splatter House (Japan)" )
+GAME( 1988, splatter, 0,        ns1,     splatter,splatter, ROT180, "Namco", "Splatter House (Japan)" )
 GAME( 1988, faceoff,  0,        faceoff, faceoff, faceoff,  ROT0,   "Namco", "Face Off (Japan)" )
 GAME( 1989, rompers,  0,        ns1,     splatter,rompers,  ROT270, "Namco", "Rompers (Japan)" )
 GAME( 1989, romperso, rompers,  ns1,     splatter,rompers,  ROT270, "Namco", "Rompers (Japan old version)" )
