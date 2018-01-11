@@ -113,7 +113,7 @@ CPUS+=N7751@
 #CPUS+=M6802@
 CPUS+=M6803@
 CPUS+=M6808@
-#CPUS+=HD63701@
+CPUS+=HD63701@
 #CPUS+=NSC8105@
 #CPUS+=M6805@
 #CPUS+=M68705@
@@ -259,6 +259,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/cninja_vidhrdw.c $(CORE_DIR)/drivers/cninja.c \
 				 $(CORE_DIR)/vidhrdw/xmen_vidhrdw.c $(CORE_DIR)/drivers/xmen.c \
 				 $(CORE_DIR)/vidhrdw/circusc_vidhrdw.c $(CORE_DIR)/drivers/circusc.c \
+				 $(CORE_DIR)/vidhrdw/yiear_vidhrdw.c $(CORE_DIR)/sndhrdw/trackfld_sndhrdw.c $(CORE_DIR)/drivers/yiear.c \
 				 $(CORE_DIR)/machine/simpsons_machine.c $(CORE_DIR)/vidhrdw/simpsons_vidhrdw.c $(CORE_DIR)/drivers/simpsons.c \
 				 $(CORE_DIR)/vidhrdw/moo_vidhrdw.c $(CORE_DIR)/drivers/moo.c \
 				 $(CORE_DIR)/vidhrdw/cabal_vidhrdw.c $(CORE_DIR)/drivers/cabal.c \
@@ -278,6 +279,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/sndhrdw/system16_sndhrdw.c \
 				 $(CORE_DIR)/drivers/system16.c $(CORE_DIR)/drivers/aburner.c \
 				 $(CORE_DIR)/vidhrdw/kaneko16_vidhrdw.c $(CORE_DIR)/drivers/kaneko16.c \
+				 $(CORE_DIR)/vidhrdw/namcos86_vidhrdw.c $(CORE_DIR)/drivers/namcos86.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c
 
 # List of CPU core (and, for a debug build, disassembler) object files

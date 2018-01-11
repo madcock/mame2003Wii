@@ -598,7 +598,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( skykiddo )	/* (c) 1986 */
 	DRIVER( roishtar )	/* (c) 1986 */
 	DRIVER( genpeitd )	/* (c) 1986 */
+#endif   
 	DRIVER( rthunder )	/* (c) 1986 new version */
+#if 0   
 	DRIVER( rthundro )	/* (c) 1986 old version */
 	DRIVER( wndrmomo )	/* (c) 1987 */
 
@@ -3144,8 +3146,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( mikiehs )	/* GX469 (c) 1984 */
 	DRIVER( roadf )		/* GX461 (c) 1984 */
 	DRIVER( roadf2 )	/* GX461 (c) 1984 */
+#endif
 	DRIVER( yiear )		/* GX407 (c) 1985 */
 	DRIVER( yiear2 )	/* GX407 (c) 1985 */
+#if 0
 	DRIVER( kicker )	/* GX477 (c) 1985 */
 	DRIVER( shaolins )	/* GX477 (c) 1985 */
 	DRIVER( pingpong )	/* GX555 (c) 1985 */
@@ -4132,10 +4136,12 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( trog3 )		/* (c) 1990 Midway */
 	DRIVER( trogpa6 )	/* (c) 1990 Midway */
 	DRIVER( trogp )		/* (c) 1990 Midway */
+#endif   
 	DRIVER( smashtv )	/* (c) 1990 Williams */
 	DRIVER( smashtv6 )	/* (c) 1990 Williams */
 	DRIVER( smashtv5 )	/* (c) 1990 Williams */
 	DRIVER( smashtv4 )	/* (c) 1990 Williams */
+#if 0   
 	DRIVER( hiimpact )	/* (c) 1990 Williams */
 	DRIVER( shimpact )	/* (c) 1991 Midway */
 	DRIVER( shimpacp )	/* (c) 1991 Midway */
