@@ -2482,7 +2482,9 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( aburner )	/* (c) 1987 */
 	DRIVER( aburner2 )  /* (c) 1987 */
 	DRIVER( alexkida )	/* (c) 1986 */
+#endif
 	DRIVER( aliensyn )	/* (c) 1987 */
+#if 0
 	DRIVER( altbeas2 )	/* (c) 1988 */
 	DRIVER( altbeast )	/* (c) 1988 */
 	DRIVER( astormbl )	/* bootleg */
@@ -3020,24 +3022,37 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	/* MBB ?? */
 	/* MBC ?? */
 	/* Boogie Wings/The Great Ragtime Show MBD (c) 1993 */
+	DRIVER( boogwing )	/* MBD (c) 1993 Data East Corporation (Euro) */
+	DRIVER( boogwinga )	/* MBD (c) 1993 Data East Corporation (Asia) */
+	DRIVER( ragtime )	/* MBD (c) 1993 Data East Corporation (Japan)*/
+	DRIVER( ragtimea )	/* MBD (c) 1993 Data East Corporation (Japan)*/
 	/* Double Wings        MBE (c) 1993 Mitchell */
 	DRIVER( fghthist )	/* MBF (c) 1993 Data East Corporation (US) */
 	DRIVER( fghthstw )	/* MBF (c) 1993 Data East Corporation (World) */
 	DRIVER( fghthsta )	/* MBF (c) 1993 Data East Corporation (US) */
 	/* Heavy Smash         MBG */
-	DRIVER( nslasher )	/* MBH */
+	DRIVER( nslasher )	/* MBH (c) 1994 Data East Corporation  */
+	DRIVER( nslasherj )	/* MBH (c) 1994 Data East Corporation  */
+	DRIVER( nslashers )	/* MBH (c) 1994 Data East Corporation  */
 	/* MBI ?? */
 	/* MBJ ?? */
 	/* MBK ?? */
 	/* MBL ?? */
 	DRIVER( lockload )	/* MBM (c) 1994 Data East Corporation (US) */
 	/* Joe & Mac Return    MBN (c) 1994 */
+	DRIVER( joemacr )	/* MBN (c) 1994 Data East Corporation  */
+	DRIVER( joemacra )	/* MBN (c) 1994 Data East Corporation  */
 	/* MBO ?? */
 	/* MBP ?? */
 	/* MBQ ?? */
 	DRIVER( tattass )	/* prototype (c) 1994 Data East Pinball (US) */
 	DRIVER( tattassa )	/* prototype (c) 1994 Data East Pinball (Asia) */
 	/* Charlie Ninja       MBR (c) Mitchell */
+#endif
+	DRIVER( charlien )	/* MBR (c) 1995 Mitchell */
+	DRIVER( candance )	/* (c) 1996 Mitchell */
+	DRIVER( osman )		/* (c) 1996 Mitchell */
+#if 0
 	/* MBS ?? */
 	/* MBT ?? */
 	/* MBU ?? */
@@ -4596,7 +4611,9 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( fjbuster )
 	DRIVER( brapboys )
 	DRIVER( bloodwar )
-	DRIVER( bonkadv )
+#endif
+	DRIVER( bonkadv ) /* (c) 1994 Kaneko */
+#if 0
 	DRIVER( gtmr )		/* (c) 1994 Kaneko */
 	DRIVER( gtmre )		/* (c) 1994 Kaneko */
 	DRIVER( gtmrusa )	/* (c) 1994 Kaneko (US) */

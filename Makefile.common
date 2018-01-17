@@ -151,7 +151,7 @@ CPUS+=ADSP2115@
 #CPUS+=ASAP@
 #CPUS+=UPD7810@
 #CPUS+=UPD7807@
-#CPUS+=ARM@
+CPUS+=ARM@
 #CPUS+=JAGUAR@
 #CPUS+=R3000@
 #CPUS+=R4600@
@@ -280,6 +280,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/drivers/system16.c $(CORE_DIR)/drivers/aburner.c \
 				 $(CORE_DIR)/vidhrdw/kaneko16_vidhrdw.c $(CORE_DIR)/drivers/kaneko16.c \
 				 $(CORE_DIR)/vidhrdw/namcos86_vidhrdw.c $(CORE_DIR)/drivers/namcos86.c \
+				 $(CORE_DIR)/drivers/simpl156.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c
 
 # List of CPU core (and, for a debug build, disassembler) object files
