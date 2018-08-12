@@ -281,6 +281,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/kaneko16_vidhrdw.c $(CORE_DIR)/drivers/kaneko16.c \
 				 $(CORE_DIR)/vidhrdw/namcos86_vidhrdw.c $(CORE_DIR)/drivers/namcos86.c \
 				 $(CORE_DIR)/drivers/simpl156.c \
+				 $(CORE_DIR)/machine/cchip.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c
 
 # List of CPU core (and, for a debug build, disassembler) object files
