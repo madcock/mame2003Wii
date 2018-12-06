@@ -81,7 +81,7 @@ CPUS+=Z80@
 #CPUS+=8080@
 #CPUS+=8085A@
 CPUS+=M6502@
-#CPUS+=M65C02@
+CPUS+=M65C02@
 #CPUS+=M65SC02@
 #CPUS+=M65CE02@
 #CPUS+=M6509@
@@ -90,7 +90,7 @@ CPUS+=M6502@
 #CPUS+=M7501@
 #CPUS+=M8502@
 CPUS+=N2A03@
-#CPUS+=DECO16@
+CPUS+=DECO16@
 #CPUS+=M4510@
 CPUS+=H6280@
 #CPUS+=I86@
@@ -116,9 +116,9 @@ CPUS+=M6808@
 CPUS+=HD63701@
 #CPUS+=NSC8105@
 #CPUS+=M6805@
-#CPUS+=M68705@
+CPUS+=M68705@
 #CPUS+=HD63705@
-#CPUS+=HD6309@
+CPUS+=HD6309@
 CPUS+=M6809@
 CPUS+=KONAMI@
 CPUS+=M68000@
@@ -180,24 +180,24 @@ SOUNDS+=YM2151_ALT@
 #SOUNDS+=YM2608@
 SOUNDS+=YM2610@
 SOUNDS+=YM2610B@
-#SOUNDS+=YM2612@
+SOUNDS+=YM2612@
 SOUNDS+=YM3438@
 SOUNDS+=YM2413@
 SOUNDS+=YM3812@
 #SOUNDS+=YMZ280B@
-#SOUNDS+=YM3526@
+SOUNDS+=YM3526@
 #SOUNDS+=Y8950@
 #SOUNDS+=SN76477@
 SOUNDS+=SN76496@
-#SOUNDS+=POKEY@
+SOUNDS+=POKEY@
 #SOUNDS+=TIA@
 SOUNDS+=NES@
 #SOUNDS+=ASTROCADE@
 SOUNDS+=NAMCO@
-#SOUNDS+=NAMCONA@
+SOUNDS+=NAMCONA@
 #SOUNDS+=TMS36XX@
 #SOUNDS+=TMS5110@
-#SOUNDS+=TMS5220@
+SOUNDS+=TMS5220@
 SOUNDS+=VLM5030@
 SOUNDS+=ADPCM@
 SOUNDS+=OKIM6295@
@@ -224,7 +224,7 @@ SOUNDS+=BSMT2000@
 #SOUNDS+=YMF278B@
 #SOUNDS+=GAELCO_CG1V@
 #SOUNDS+=GAELCO_GAE1@
-#SOUNDS+=X1_010@
+SOUNDS+=X1_010@
 #SOUNDS+=MULTIPCM@
 #SOUNDS+=C6280@
 #SOUNDS+=SP0250@
@@ -249,6 +249,7 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/punchout_vidhrdw.c $(CORE_DIR)/drivers/punchout.c \
 				 $(CORE_DIR)/machine/dec0_machine.c $(CORE_DIR)/vidhrdw/dec0_vidhrdw.c $(CORE_DIR)/drivers/dec0.c \
 				 $(CORE_DIR)/vidhrdw/deco16ic.c \
+				 $(CORE_DIR)/vidhrdw/deco32_vidhrdw.c $(CORE_DIR)/drivers/deco32.c \
 				 $(CORE_DIR)/machine/konami_machine.c \
 				 $(CORE_DIR)/machine/konamigx_machine.c $(CORE_DIR)/vidhrdw/konamigx_vidhrdw.c $(CORE_DIR)/drivers/konamigx.c \
 				 $(CORE_DIR)/vidhrdw/contra_vidhrdw.c $(CORE_DIR)/drivers/contra.c \
@@ -259,7 +260,9 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/cninja_vidhrdw.c $(CORE_DIR)/drivers/cninja.c \
 				 $(CORE_DIR)/vidhrdw/xmen_vidhrdw.c $(CORE_DIR)/drivers/xmen.c \
 				 $(CORE_DIR)/vidhrdw/circusc_vidhrdw.c $(CORE_DIR)/drivers/circusc.c \
+				 $(CORE_DIR)/vidhrdw/tp84_vidhrdw.c $(CORE_DIR)/drivers/tp84.c \
 				 $(CORE_DIR)/vidhrdw/yiear_vidhrdw.c $(CORE_DIR)/sndhrdw/trackfld_sndhrdw.c $(CORE_DIR)/drivers/yiear.c \
+				 $(CORE_DIR)/vidhrdw/shaolins_vidhrdw.c $(CORE_DIR)/drivers/shaolins.c \
 				 $(CORE_DIR)/machine/simpsons_machine.c $(CORE_DIR)/vidhrdw/simpsons_vidhrdw.c $(CORE_DIR)/drivers/simpsons.c \
 				 $(CORE_DIR)/vidhrdw/moo_vidhrdw.c $(CORE_DIR)/drivers/moo.c \
 				 $(CORE_DIR)/vidhrdw/cabal_vidhrdw.c $(CORE_DIR)/drivers/cabal.c \
@@ -275,11 +278,40 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/vidhrdw/taito_b_vidhrdw.c $(CORE_DIR)/drivers/taito_b.c \
 				 $(CORE_DIR)/vidhrdw/taito_f2_vidhrdw.c $(CORE_DIR)/drivers/taito_f2.c \
 				 $(CORE_DIR)/machine/toaplan1_machine.c $(CORE_DIR)/vidhrdw/toaplan1_vidhrdw.c $(CORE_DIR)/drivers/toaplan1.c \
+				 $(CORE_DIR)/vidhrdw/system1_vidhrdw.c $(CORE_DIR)/drivers/system1.c \
 				 $(CORE_DIR)/machine/system16_machine.c $(CORE_DIR)/vidhrdw/system16_vidhrdw.c $(CORE_DIR)/vidhrdw/sys16spr.c \
 				 $(CORE_DIR)/sndhrdw/system16_sndhrdw.c \
-				 $(CORE_DIR)/drivers/system16.c $(CORE_DIR)/drivers/aburner.c \
+				 $(CORE_DIR)/drivers/system16.c $(CORE_DIR)/drivers/aburner.c $(CORE_DIR)/drivers/outrun.c \
 				 $(CORE_DIR)/vidhrdw/kaneko16_vidhrdw.c $(CORE_DIR)/drivers/kaneko16.c \
 				 $(CORE_DIR)/vidhrdw/namcos86_vidhrdw.c $(CORE_DIR)/drivers/namcos86.c \
+				 $(CORE_DIR)/vidhrdw/seta_vidhrdw.c $(CORE_DIR)/drivers/seta.c \
+				 $(CORE_DIR)/vidhrdw/stlforce_vidhrdw.c $(CORE_DIR)/drivers/stlforce.c \
+				 $(CORE_DIR)/vidhrdw/psychic5_vidhrdw.c $(CORE_DIR)/drivers/psychic5.c \
+				 $(CORE_DIR)/vidhrdw/liberate_vidhrdw.c $(CORE_DIR)/drivers/liberate.c \
+				 $(CORE_DIR)/vidhrdw/tutankhm_vidhrdw.c $(CORE_DIR)/drivers/junofrst.c \
+				 $(CORE_DIR)/vidhrdw/timeplt_vidhrdw.c $(CORE_DIR)/drivers/timeplt.c $(CORE_DIR)/sndhrdw/timeplt_sndhrdw.c \
+				 $(CORE_DIR)/vidhrdw/megazone_vidhrdw.c $(CORE_DIR)/drivers/megazone.c \
+				 $(CORE_DIR)/vidhrdw/jailbrek_vidhrdw.c $(CORE_DIR)/drivers/jailbrek.c \
+				 $(CORE_DIR)/vidhrdw/ironhors_vidhrdw.c $(CORE_DIR)/drivers/ironhors.c \
+				 $(CORE_DIR)/machine/jackal_machine.c $(CORE_DIR)/vidhrdw/jackal_vidhrdw.c $(CORE_DIR)/drivers/jackal.c \
+				 $(CORE_DIR)/machine/taitosj_machine.c $(CORE_DIR)/vidhrdw/taitosj_vidhrdw.c $(CORE_DIR)/drivers/taitosj.c \
+				 $(CORE_DIR)/vidhrdw/taito_l_vidhrdw.c $(CORE_DIR)/drivers/taito_l.c \
+				 $(CORE_DIR)/machine/mexico86_machine.c $(CORE_DIR)/vidhrdw/mexico86_vidhrdw.c $(CORE_DIR)/drivers/mexico86.c \
+				 $(CORE_DIR)/vidhrdw/mystwarr_vidhrdw.c $(CORE_DIR)/drivers/mystwarr.c \
+				 $(CORE_DIR)/vidhrdw/galivan_vidhrdw.c $(CORE_DIR)/drivers/galivan.c \
+				 $(CORE_DIR)/vidhrdw/pandoras_vidhrdw.c $(CORE_DIR)/drivers/pandoras.c \
+				 $(CORE_DIR)/vidhrdw/rockrage_vidhrdw.c $(CORE_DIR)/drivers/rockrage.c \
+				 $(CORE_DIR)/vidhrdw/battlnts_vidhrdw.c $(CORE_DIR)/drivers/battlnts.c \
+				 $(CORE_DIR)/vidhrdw/fastlane_vidhrdw.c $(CORE_DIR)/drivers/fastlane.c \
+				 $(CORE_DIR)/vidhrdw/chqflag_vidhrdw.c $(CORE_DIR)/drivers/chqflag.c \
+				 $(CORE_DIR)/vidhrdw/namcona1_vidhrdw.c $(CORE_DIR)/drivers/namcona1.c \
+				 $(CORE_DIR)/vidhrdw/thedeep_vidhrdw.c $(CORE_DIR)/drivers/thedeep.c \
+				 $(CORE_DIR)/vidhrdw/xybots_vidhrdw.c $(CORE_DIR)/drivers/xybots.c \
+				 $(CORE_DIR)/machine/atarigen.c $(CORE_DIR)/sndhrdw/atarijsa.c \
+				 $(CORE_DIR)/vidhrdw/atarimo_vidhrdw.c $(CORE_DIR)/vidhrdw/atarirle_vidhrdw.c \
+				 $(CORE_DIR)/machine/slapstic.c \
+				 $(CORE_DIR)/vidhrdw/lastduel_vidhrdw.c $(CORE_DIR)/drivers/lastduel.c \
+				 $(CORE_DIR)/vidhrdw/pirates_vidhrdw.c $(CORE_DIR)/drivers/pirates.c \
 				 $(CORE_DIR)/drivers/simpl156.c \
 				 $(CORE_DIR)/machine/cchip.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c

@@ -292,6 +292,19 @@ bool retro_load_game(const struct retro_game_info *game)
         // Get ROM directory
         romDir = normalizePath(fallbackDir);
         romDir = peelPathItem(romDir);
+        
+        unsigned rotateMode;
+        int orientation = drivers[driverIndex]->flags & ORIENTATION_MASK;
+        
+        switch (orientation)
+        {
+           case  ROT90: rotateMode = 1; break;
+           case ROT180: rotateMode = 2; break;
+           case ROT270: rotateMode = 3; break;
+           default:     rotateMode = 0;
+        }
+
+        environ_cb(RETRO_ENVIRONMENT_SET_ROTATION, &rotateMode);
 
         // Set all options before starting the game
         options.samplerate = sample_rate;

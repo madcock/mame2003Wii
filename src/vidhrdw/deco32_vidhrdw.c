@@ -340,7 +340,7 @@ static void fghthist_draw_sprites(struct mame_bitmap *bitmap, const data32_t *sp
 					colour,
 					fx,fy,
 					x,y + mult * multi,
-					&Machine->visible_area,TRANSPARENCY_PEN,0,pri,1<<gfxbank,1);
+					&Machine->visible_area,TRANSPARENCY_PEN,0,pri,1<<gfxbank);
 
 			//deco16_pdrawgfx(
 			//		bitmap,cliprect,machine->gfx[gfxbank],
@@ -535,7 +535,7 @@ static void tattass_drawsprites(struct mame_bitmap *bitmap, const data32_t *spri
 					colour,
 					fx,fy,
 					x,y + mult * multi,
-					&Machine->visible_area,trans,0,pri,1<<gfxbank,1);
+					&Machine->visible_area,trans,0,pri,1<<gfxbank);
 
 			multi--;
 		}

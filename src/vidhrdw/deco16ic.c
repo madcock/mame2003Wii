@@ -868,7 +868,7 @@ void deco16_clear_sprite_priority_bitmap(void)
 /* A special pdrawgfx z-buffered sprite renderer that is needed to properly draw multiple sprite sources with alpha */
 void deco16_pdrawgfx(struct mame_bitmap *dest,const struct GfxElement *gfx,
 		unsigned int code,unsigned int color,int flipx,int flipy,int sx,int sy,
-		const struct rectangle *clip,int transparency,int transparent_color,UINT32 pri_mask,UINT32 sprite_mask,UINT8 write_pri)
+		const struct rectangle *clip,int transparency,int transparent_color,UINT32 pri_mask,UINT32 sprite_mask)
 {
 	int ox,oy,cx,cy;
 	int x_index,y_index,x,y;
@@ -911,8 +911,7 @@ void deco16_pdrawgfx(struct mame_bitmap *dest,const struct GfxElement *gfx,
 						destb[x] = alpha_blend32(destb[x], pal[c]);
 					else
 						destb[x] = pal[c];
-					if (write_pri)
-						pri[x] |= pri_mask;
+               pri[x] |= pri_mask;
 				}
 				spri[x]|=sprite_mask;
 			}
