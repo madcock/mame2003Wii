@@ -44,7 +44,7 @@ struct JoystickInfo jsItems[] =
 
 ******************************************************************************/
 
-int retroJsState[72];
+int retroJsState[64];
 int16_t analogjoy[4][4];
 
 const struct JoystickInfo *osd_get_joy_list(void)

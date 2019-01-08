@@ -533,11 +533,13 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( galaga84 )	/* hack */
 	DRIVER( nebulbee )	/* hack */
 	DRIVER( gatsbee )	/* (c) 1984 Uchida / hack */
+#endif
 	DRIVER( digdug )	/* (c) 1982 */
 	DRIVER( digdugb )	/* (c) 1982 */
 	DRIVER( digdugat )	/* (c) 1982 Atari */
 	DRIVER( digduga1 )	/* (c) 1982 Atari */
 	DRIVER( dzigzag )	/* bootleg */
+#if 0
 	DRIVER( xevious )	/* (c) 1982 */
 	DRIVER( xeviousa )	/* (c) 1982 + Atari license */
 	DRIVER( xeviousb )	/* (c) 1982 + Atari license */
@@ -572,6 +574,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( liblrabl )	/* (c) 1983 */
 	DRIVER( toypop )	/* (c) 1986 */
 	/* Z8000 games */
+#endif
 	DRIVER( polepos )	/* (c) 1982  */
 	DRIVER( poleposa )	/* (c) 1982 + Atari license */
 	DRIVER( polepos1 )	/* (c) 1982 Atari */
@@ -580,6 +583,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( poleps2a )	/* (c) 1983 + Atari license */
 	DRIVER( poleps2b )	/* bootleg */
 	DRIVER( poleps2c )	/* bootleg */
+#if 0
 	/* no custom I/O in the following, HD63701 (or compatible) microcontroller instead */
 	DRIVER( pacland )	/* (c) 1984 */
 	DRIVER( pacland2 )	/* (c) 1984 */
@@ -995,8 +999,10 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( invaders )	/* 739 [1979] */
 	DRIVER( blueshrk )	/* 742 [1978] */
 	DRIVER( invad2ct )	/* 851 (c) 1980 Midway */
+#endif
 	DRIVER( invadpt2 )	/* 852 [1980] Taito */
 	DRIVER( invaddlx )	/* 852 [1980] Midway */
+#if 0
 	DRIVER( moonbase )	/* Zeta - Nichibutsu */
 	/* 870 - Space Invaders Deluxe cocktail */
 	DRIVER( earthinv )
@@ -1130,7 +1136,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( powerdrv )	/* (c) 1986 */
 	DRIVER( stargrds )	/* (c) 1987 */
 	DRIVER( maxrpm )	/* (c) 1986 */
+#endif
 	DRIVER( spyhunt )	/* (c) 1983 */
+#if 0
 	DRIVER( turbotag )	/* (c) 1985 */
 	DRIVER( crater )	/* (c) 1984 */
 	/* MCR 68000 */
@@ -1225,22 +1233,22 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( vigilntu )	/* (c) 1988 (US) */
 	DRIVER( vigilntj )	/* (c) 1988 (Japan) */
 	DRIVER( kikcubic )	/* (c) 1988 (Japan) */
+#endif
 	/* M72 (and derivatives) */
 	DRIVER( rtype )		/* (c) 1987 (Japan) */
 	DRIVER( rtypepj )	/* (c) 1987 (Japan) */
 	DRIVER( rtypeu )	/* (c) 1987 + Nintendo USA license (US) */
 	DRIVER( bchopper )	/* (c) 1987 */
 	DRIVER( mrheli )	/* (c) 1987 (Japan) */
-#endif
 	DRIVER( nspirit )	/* (c) 1988 */
 	DRIVER( nspiritj )	/* (c) 1988 (Japan) */
-#if 0
 	DRIVER( imgfight )	/* (c) 1988 (Japan) */
 	DRIVER( loht )		/* (c) 1989 */
 	DRIVER( xmultipl )	/* (c) 1989 (Japan) */
 	DRIVER( dbreed )	/* (c) 1989 */
 	DRIVER( rtype2 )	/* (c) 1989 */
 	DRIVER( rtype2j )	/* (c) 1989 (Japan) */
+#if 0
 	DRIVER( majtitle )	/* (c) 1990 (Japan) */
 #endif
 	DRIVER( hharry )	/* (c) 1990 (World) */
@@ -1250,8 +1258,8 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( dkgenm72 )	/* (c) 1990 (Japan) */
 	DRIVER( poundfor )	/* (c) 1990 (World) */
 	DRIVER( poundfou )	/* (c) 1990 Irem America (US) */
-	DRIVER( airduel )	/* (c) 1990 (Japan) */
 #endif   
+	DRIVER( airduel )	/* (c) 1990 (Japan) */
 	DRIVER( cosmccop )	/* (c) 1991 (World) */
 #if 0
 	DRIVER( gallop )	/* (c) 1991 (Japan) */
@@ -1285,7 +1293,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( thndblst )	/* (c) 1991 Irem (Japan) */
 #endif
 	DRIVER( uccops )	/* (c) 1992 Irem (World) */
-        DRIVER( uccopsar )	/* (c) 1992 Irem (World) */
+	DRIVER( uccopsar )	/* (c) 1992 Irem (World) */
 	DRIVER( uccopsj )	/* (c) 1992 Irem (Japan) */
 	DRIVER( mysticri )	/* (c) 1992 Irem (World) */
 #if 0
@@ -1948,23 +1956,27 @@ V-V                           TP-027
 	DRIVER( skywolf2 )	/* bootleg */
 
 	/* Williams games */
+#endif
 	DRIVER( defender )	/* (c) 1980 */
 	DRIVER( defendg )	/* (c) 1980 */
 	DRIVER( defendw )	/* (c) 1980 */
 	DRIVER( defndjeu )	/* bootleg */
 	DRIVER( defcmnd )	/* bootleg */
 	DRIVER( defence )	/* bootleg */
+#if 0
 	DRIVER( mayday )
 	DRIVER( maydaya )
 	DRIVER( maydayb )
 	DRIVER( colony7 )	/* (c) 1981 Taito */
 	DRIVER( colony7a )	/* (c) 1981 Taito */
+#endif
 	DRIVER( stargate )	/* (c) 1981 */
 	DRIVER( robotron )	/* (c) 1982 */
 	DRIVER( robotryo )	/* (c) 1982 */
 	DRIVER( joust )		/* (c) 1982 */
 	DRIVER( joustr )	/* (c) 1982 */
 	DRIVER( joustwr )	/* (c) 1982 */
+#if 0
 	DRIVER( bubbles )	/* (c) 1982 */
 	DRIVER( bubblesr )	/* (c) 1982 */
 	DRIVER( bubblesp )	/* (c) 1982 */
@@ -1973,13 +1985,17 @@ V-V                           TP-027
 	DRIVER( sinista1 )	/* (c) 1982 */
 	DRIVER( sinista2 )	/* (c) 1982 */
 	DRIVER( playball )	/* (c) 1983 */
+#endif
 	DRIVER( blaster )	/* (c) 1983 */
 	DRIVER( blastkit )	/* (c) 1983 */
+#if 0
 	DRIVER( spdball )	/* (c) 1985 */
 	DRIVER( mysticm )	/* (c) 1983 */
 	DRIVER( tshoot )	/* (c) 1984 */
 	DRIVER( inferno )	/* (c) 1984 */
+#endif
 	DRIVER( joust2 )	/* (c) 1986 */
+#if 0
 	DRIVER( lottofun )	/* (c) 1987 H.A.R. Management */
 
 	/* Capcom games */
@@ -2815,7 +2831,9 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( btimem )	/* (c) 1982 + Midway */
 	DRIVER( cookrace )	/* bootleg */
 	DRIVER( wtennis )	/* bootleg 1982 */
+#endif
 	DRIVER( brubber )	/* (c) 1982 */
+#if 0
 	DRIVER( bnj )		/* (c) 1982 + Midway */
 	DRIVER( caractn )	/* bootleg */
 	DRIVER( disco )		/* (c) 1982 */
@@ -3584,6 +3602,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	/* Atari vector games */
 	DRIVER( llander )	/* 0345xx			no copyright notice */
 	DRIVER( llander1 )	/* 0345xx			no copyright notice */
+#endif
 	DRIVER( asteroid )	/* 035127-035145	(c) 1979 */
 	DRIVER( asteroi1 )	/* 035127-035145	no copyright notice */
 	DRIVER( asteroib )	/* (bootleg) */
@@ -3593,8 +3612,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( bzone )		/* 0364xx			(c) 1980 */
 	DRIVER( bzone2 )	/* 0364xx			(c) 1980 */
 	DRIVER( bzonec )	/* 0364xx			(c) 1980 */
+#if 0
 	DRIVER( bradley )	/*     ??			(c) 1980 */
 	DRIVER( redbaron )	/* 036995-037007	(c) 1980 */
+#endif
 	DRIVER( tempest )	/* 136002			(c) 1980 */
 	DRIVER( tempest1 )	/* 136002			(c) 1980 */
 	DRIVER( tempest2 )	/* 136002			(c) 1980 */
@@ -3606,9 +3627,11 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( gravp )		/* (proto)			(c) 1982 */
 	DRIVER( lunarbat )	/* (proto)			(c) 1982 */
 	DRIVER( lunarba1 )	/* (proto)			(c) 1982 */
+#if 0
 	DRIVER( quantum )	/* 136016			(c) 1982 */	/* made by Gencomp */
 	DRIVER( quantum1 )	/* 136016			(c) 1982 */	/* made by Gencomp */
 	DRIVER( quantump )	/* 136016			(c) 1982 */	/* made by Gencomp */
+#endif
 	DRIVER( bwidow )	/* 136017			(c) 1982 */
 	DRIVER( starwars )	/* 136021			(c) 1983 */
 	DRIVER( starwar1 )	/* 136021			(c) 1983 */
@@ -3630,6 +3653,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( millpac )	/* Valadon */
 	DRIVER( magworm )	/* (bootleg) */
 	DRIVER( milliped )	/* 136013			(c) 1982 */
+#if 0
 	DRIVER( qwak )	 	/* (proto)			(c) 1982 */
 	DRIVER( runaway )	/* (proto)          (c) 1982 */
 
@@ -3931,7 +3955,9 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( sasuke )	/* [1980] Shin Nihon Kikaku (SNK) */
 	DRIVER( satansat )	/* (c) 1981 SNK */
 	DRIVER( zarzon )	/* (c) 1981 Taito, gameplay says SNK */
+#endif
 	DRIVER( vanguard )	/* (c) 1981 SNK */
+#if 0
 	DRIVER( vangrdce )	/* (c) 1981 SNK + Centuri */
 	DRIVER( fantasy )	/* (c) 1981 Rock-ola */
 	DRIVER( fantasyj )	/* (c) 1981 SNK */

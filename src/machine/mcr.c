@@ -149,7 +149,7 @@ struct GfxLayout mcr_sprite_layout =
  *
  *************************************/
 
-READ_HANDLER( zwackery_port_2_r );
+//READ_HANDLER( zwackery_port_2_r );
 
 static struct pia6821_interface zwackery_pia_2_intf =
 {
@@ -160,7 +160,8 @@ static struct pia6821_interface zwackery_pia_2_intf =
 
 static struct pia6821_interface zwackery_pia_3_intf =
 {
-	/*inputs : A/B,CA/B1,CA/B2 */ input_port_1_r, zwackery_port_2_r, 0, 0, 0, 0,
+	/* input_port_1_r, zwackery_port_2_r, 0, 0, 0, 0, */
+	/*inputs : A/B,CA/B1,CA/B2 */ input_port_1_r, 0, 0, 0, 0, 0,
 	/*outputs: A/B,CA/B2       */ zwackery_pia_3_w, 0, zwackery_ca2_w, 0,
 	/*irqs   : A/B             */ 0, 0
 };

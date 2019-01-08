@@ -45,7 +45,11 @@ void retro_set_environment(retro_environment_t cb)
       { "mame2003-skip_disclaimer", "Skip Disclaimer; disabled|enabled" },
       { "mame2003-skip_warnings", "Skip Warnings; disabled|enabled" },
       { "mame2003-sample_rate", "Sample Rate (KHz); 48000|8000|11025|22050|32000|44100" },
-      { "mame2003-cheats", "Cheats; disabled|enabled" },
+      { "mame2003-cheats", "Cheats (restart); disabled|enabled" },
+      { "mame2003-vector-resolution", "Vector Resolution (restart); AUTO|320x240|400x300|512x384|640x480" },
+      { "mame2003-vector-antialias", "Vector Antialiasing; enabled|disabled" },
+      { "mame2003-vector-beam-width", "Vector Beam Width (AA only); 1.0|1.5|2.0|2.5|3.0" },
+      { "mame2003-vector-intensity", "Vector Intensity; 1.5|2.0|2.5|3.0|0.5|1.0" },
       { NULL, NULL },
    };
    environ_cb = cb;
@@ -115,14 +119,12 @@ static char* peelPathItem(char* aPath)
     return aPath;
 }
 
-static int driverIndex; //< Index of mame game loaded
-
-//
+static int driverIndex; // Index of mame game loaded
 
 extern const struct KeyboardInfo retroKeys[];
 extern int retroKeyState[512];
 
-extern int retroJsState[72];
+extern int retroJsState[64];
 extern int16_t analogjoy[4][4];
 extern struct osd_create_params videoConfig;
 
@@ -147,8 +149,6 @@ void retro_get_system_info(struct retro_system_info *info)
    info->block_extract = true;
 }
 
-int sample_rate = 22050;
-
 void retro_get_system_av_info(struct retro_system_av_info *info)
 {   
     info->geometry.base_width = videoConfig.width;
@@ -157,13 +157,12 @@ void retro_get_system_av_info(struct retro_system_av_info *info)
     info->geometry.max_height = videoConfig.height;
     info->geometry.aspect_ratio = (float)videoConfig.aspect_x / (float)videoConfig.aspect_y;
     info->timing.fps = Machine->drv->frames_per_second;
-    info->timing.sample_rate = sample_rate;
+    /* please note if you want bally games to work properly set the sample rate to 22050 
+     * you cant go below 48 frames with the default that is set you will need to restart the core */
+    info->timing.sample_rate = options.samplerate; 
 }
 
 extern int frameskip;
-unsigned skip_disclaimer = 0;
-unsigned skip_warnings = 0;
-unsigned cheats = 0;
 
 static void update_variables(void)
 {
@@ -171,33 +170,80 @@ static void update_variables(void)
    
    var.value = NULL;
    var.key = "mame2003-frameskip";
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || var.value)
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
       frameskip = atoi(var.value);
 
    var.value = NULL;
    var.key = "mame2003-dcs-speedhack";
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || var.value)
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
       activate_dcs_speedhack = (strcmp(var.value, "enabled") == 0);
 
    var.value = NULL;
    var.key = "mame2003-skip_disclaimer";
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || var.value)
-      skip_disclaimer = (strcmp(var.value, "enabled") == 0);
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.skip_disclaimer = (strcmp(var.value, "enabled") == 0);
 
    var.value = NULL;
    var.key = "mame2003-skip_warnings";
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || var.value)
-      skip_warnings = (strcmp(var.value, "enabled") == 0);
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.skip_warnings = (strcmp(var.value, "enabled") == 0);
 
    var.value = NULL;
    var.key = "mame2003-sample_rate";
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || var.value)
-      sample_rate = atoi(var.value);
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.samplerate = atoi(var.value);
 
    var.value = NULL;
    var.key = "mame2003-cheats";
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || var.value)
-         cheats = (strcmp(var.value, "enabled") == 0);
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.cheat = (strcmp(var.value, "enabled") == 0);
+         
+   var.value = NULL;
+   var.key = "mame2003-vector-resolution";
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+   {
+      if (strcmp(var.value, "320x240") == 0)
+      {
+         options.vector_width = 320;
+         options.vector_height = 240;
+      }
+      else if (strcmp(var.value, "400x300") == 0)
+      {
+         options.vector_width = 400;
+         options.vector_height = 300;
+      }
+      else if (strcmp(var.value, "640x480") == 0)
+      {
+         options.vector_width = 640;
+         options.vector_height = 480;
+      }
+      else if (strcmp(var.value, "512x384") == 0)
+      {
+         options.vector_width = 512;
+         options.vector_height = 384;
+      }
+      else
+      {
+         options.vector_width = 0;
+         options.vector_height = 0;
+      }
+   }
+   
+   var.value = NULL;
+   var.key = "mame2003-vector-antialias";
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.antialias = (strcmp(var.value, "enabled") == 0);
+
+   var.value = NULL;
+   var.key = "mame2003-vector-beam-width";
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.beam = atof(var.value); /* float: vector beam width */
+   
+   var.value = NULL;
+   var.key = "mame2003-vector-intensity";
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      options.vector_intensity = atof(var.value);
+
 }
 
 static void check_system_specs(void)
@@ -240,7 +286,9 @@ void retro_run (void)
 {
    int i, j;
    int *jsState;
+#ifndef GEKKO
    const struct KeyboardInfo *thisInput;
+#endif
    bool updated = false;
 
    poll_cb();
@@ -248,6 +296,7 @@ void retro_run (void)
    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE_UPDATE, &updated) && updated)
       update_variables();
 
+#ifndef GEKKO
    /* Keyboard*/
    thisInput = retroKeys;
    while(thisInput->name)
@@ -255,6 +304,7 @@ void retro_run (void)
       retroKeyState[thisInput->code] = input_cb(0, RETRO_DEVICE_KEYBOARD, 0, thisInput->code);
       thisInput ++;
    }
+#endif
 
    jsState = retroJsState;
    for (i = 0; i < 4; i ++)
@@ -321,13 +371,6 @@ bool retro_load_game(const struct retro_game_info *game)
         }
 
         environ_cb(RETRO_ENVIRONMENT_SET_ROTATION, &rotateMode);
-
-        // Set all options before starting the game
-        options.samplerate = sample_rate;
-        options.vector_intensity = 3.0f;
-        options.skip_disclaimer = skip_disclaimer;
-        options.skip_warnings = skip_warnings;
-        options.cheat = cheats;
 
         // Boot the emulator
         return run_game(driverIndex) == 0;

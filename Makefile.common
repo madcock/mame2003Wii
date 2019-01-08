@@ -78,7 +78,7 @@ SOURCES_C += $(CORE_DIR)/mame.c \
 # uncomment the following lines to include a CPU core
 CPUS+=Z80@
 #CPUS+=Z180@
-#CPUS+=8080@
+CPUS+=8080@
 #CPUS+=8085A@
 CPUS+=M6502@
 CPUS+=M65C02@
@@ -108,9 +108,9 @@ CPUS+=I8039@
 #CPUS+=I8048@
 CPUS+=N7751@
 #CPUS+=I8X41@
-#CPUS+=M6800@
+CPUS+=M6800@
 #CPUS+=M6801@
-#CPUS+=M6802@
+CPUS+=M6802@
 CPUS+=M6803@
 CPUS+=M6808@
 CPUS+=HD63701@
@@ -137,7 +137,7 @@ CPUS+=TMS34020@
 #CPUS+=TMS9995@
 #CPUS+=TMS99105A@
 #CPUS+=TMS99110A@
-#CPUS+=Z8000@
+CPUS+=Z8000@
 CPUS+=TMS32010@
 #CPUS+=TMS32025@
 #CPUS+=TMS32031@
@@ -187,7 +187,7 @@ SOUNDS+=YM3812@
 #SOUNDS+=YMZ280B@
 SOUNDS+=YM3526@
 #SOUNDS+=Y8950@
-#SOUNDS+=SN76477@
+SOUNDS+=SN76477@
 SOUNDS+=SN76496@
 SOUNDS+=POKEY@
 #SOUNDS+=TIA@
@@ -312,6 +312,26 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/machine/slapstic.c \
 				 $(CORE_DIR)/vidhrdw/lastduel_vidhrdw.c $(CORE_DIR)/drivers/lastduel.c \
 				 $(CORE_DIR)/vidhrdw/pirates_vidhrdw.c $(CORE_DIR)/drivers/pirates.c \
+				 $(CORE_DIR)/machine/atari_vg.c \
+				 $(CORE_DIR)/machine/asteroid_machine.c $(CORE_DIR)/sndhrdw/asteroid_sndhrdw.c $(CORE_DIR)/drivers/asteroid.c \
+				 $(CORE_DIR)/sndhrdw/llander.c \
+				 $(CORE_DIR)/drivers/bwidow.c \
+				 $(CORE_DIR)/sndhrdw/bzone_sndhrdw.c	$(CORE_DIR)/drivers/bzone.c \
+				 $(CORE_DIR)/sndhrdw/redbaron.c \
+				 $(CORE_DIR)/drivers/tempest.c \
+				 $(CORE_DIR)/machine/starwars_machine.c $(CORE_DIR)/drivers/starwars.c $(CORE_DIR)/sndhrdw/starwars_sndhrdw.c \
+				 $(CORE_DIR)/machine/mhavoc_machine.c $(CORE_DIR)/drivers/mhavoc.c \
+				 $(CORE_DIR)/machine/btime_machine.c $(CORE_DIR)/vidhrdw/btime_vidhrdw.c $(CORE_DIR)/drivers/btime.c \
+				 $(CORE_DIR)/vidhrdw/centiped_vidhrdw.c $(CORE_DIR)/drivers/centiped.c \
+				 $(CORE_DIR)/machine/digdug_machine.c $(CORE_DIR)/vidhrdw/digdug_vidhrdw.c $(CORE_DIR)/drivers/digdug.c \
+				 $(CORE_DIR)/machine/8080bw.c \
+				 $(CORE_DIR)/vidhrdw/circus_vidhrdw.c \
+				 $(CORE_DIR)/vidhrdw/8080bw_vidhrdw.c $(CORE_DIR)/sndhrdw/8080bw_sndhrdw.c $(CORE_DIR)/drivers/8080bw_drivers.c \
+				 $(CORE_DIR)/machine/polepos_machine.c $(CORE_DIR)/vidhrdw/polepos_vidhrdw.c $(CORE_DIR)/sndhrdw/polepos_sndhrdw.c $(CORE_DIR)/drivers/polepos.c \
+				 $(CORE_DIR)/machine/mcr.c $(CORE_DIR)/sndhrdw/mcr_sndhrdw.c \
+				 $(CORE_DIR)/vidhrdw/mcr3_vidhrdw.c $(CORE_DIR)/drivers/mcr3.c \
+				 $(CORE_DIR)/vidhrdw/rockola_vidhrdw.c $(CORE_DIR)/sndhrdw/rockola_sndhrdw.c $(CORE_DIR)/drivers/rockola.c \
+				 $(CORE_DIR)/vidhrdw/crtc6845.c \
 				 $(CORE_DIR)/drivers/simpl156.c \
 				 $(CORE_DIR)/machine/cchip.c \
 				 $(CORE_DIR)/driver.c $(CORE_DIR)/cheat.c
