@@ -1437,7 +1437,9 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( onna34ra )	/* A52 (c) 1985 Taito Corporation (Japan) */
 	DRIVER( gladiatr )	/* ??? (c) 1986 Taito America Corporation (US) */
 	DRIVER( ogonsiro )	/* ??? (c) 1986 Taito Corporation (Japan) */
+#endif
 	DRIVER( nycaptor )	/* A50 (c) 1985 Taito Corporation */
+#if 0
 	DRIVER( cyclshtg )	/* A97 (c) 1986 Taito Corporation */
 	DRIVER( benberob )	/* A26 */
 	DRIVER( halleys )	/* A62 (c) 1986 Taito America Corporation + Coin It (US) */
@@ -1462,20 +1464,24 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( dariusj )	/* A96 (c) 1986 Taito Corporation (Japan) */
 	DRIVER( dariuso )	/* A96 (c) 1986 Taito Corporation (Japan) */
 	DRIVER( dariuse )	/* A96 (c) 1986 Taito Corporation (Japan) */
+#endif
 	DRIVER( rastan )	/* B04 (c) 1987 Taito Corporation Japan (World) */
 	DRIVER( rastanu )	/* B04 (c) 1987 Taito America Corporation (US) */
 	DRIVER( rastanu2 )	/* B04 (c) 1987 Taito America Corporation (US) */
 	DRIVER( rastsaga )	/* B04 (c) 1987 Taito Corporation (Japan)*/
+#if 0
 	DRIVER( topspeed )	/* B14 (c) 1987 Taito Corporation Japan (World) */
 	DRIVER( topspedu )	/* B14 (c) 1987 Taito America Corporation (US) */
 	DRIVER( fullthrl )	/* B14 (c) 1987 Taito Corporation (Japan) */
+#endif
 	DRIVER( opwolf )	/* B20 (c) 1987 Taito America Corporation (US) */
 	DRIVER( opwolfb )	/* bootleg */
-	DRIVER( othunder )	/* B67 (c) 1988 Taito Corporation Japan (World) */
-	DRIVER( othundu )	/* B67 (c) 1988 Taito America Corporation (US) */
 	DRIVER( rainbow )	/* B22 (c) 1987 Taito Corporation */
 	DRIVER( rainbowo )	/* B22 (c) 1987 Taito Corporation */
 	DRIVER( rainbowe )	/* B39 (c) 1988 Taito Corporation */
+#if 0
+	DRIVER( othunder )	/* B67 (c) 1988 Taito Corporation Japan (World) */
+	DRIVER( othundu )	/* B67 (c) 1988 Taito America Corporation (US) */
 	DRIVER( jumping )	/* bootleg */
 	DRIVER( arkanoid )	/* A75 (c) 1986 Taito Corporation Japan (World) */
 	DRIVER( arknoidu )	/* A75 (c) 1986 Taito America Corporation + Romstar license (US) */
@@ -3183,10 +3189,10 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( megazone )	/* GX319 (c) 1983 */
 	DRIVER( megaznik )	/* GX319 (c) 1983 + Interlogic / Kosuka */
 	DRIVER( pandoras )	/* GX328 (c) 1984 + Interlogic */
-#if 0
 	DRIVER( gyruss )	/* GX347 (c) 1983 */
 	DRIVER( gyrussce )	/* GX347 (c) 1983 + Centuri license */
 	DRIVER( venus )		/* bootleg */
+#if 0
 	DRIVER( trackfld )	/* GX361 (c) 1983 */
 	DRIVER( trackflc )	/* GX361 (c) 1983 + Centuri license */
 	DRIVER( hyprolym )	/* GX361 (c) 1983 */
@@ -4245,13 +4251,11 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( mkla2 )		/* (c) 1992 Midway */
 	DRIVER( mkla3 )		/* (c) 1992 Midway */
 	DRIVER( mkla4 )		/* (c) 1992 Midway */
-#if 0	
 	DRIVER( term2 )		/* (c) 1992 Midway */
 	DRIVER( term2la2 )	/* (c) 1992 Midway */
 	DRIVER( term2la1 )	/* (c) 1992 Midway */
 	DRIVER( totcarn )	/* (c) 1992 Midway */
 	DRIVER( totcarnp )	/* (c) 1992 Midway */
-#endif	
 	DRIVER( mk2 )		/* (c) 1993 Midway */
 	DRIVER( mk2r32 )	/* (c) 1993 Midway */
 	DRIVER( mk2r21 )	/* (c) 1993 Midway */
@@ -4764,9 +4768,11 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( kiwame )	/* (c) 1994 Athena */
 	DRIVER( krzybowl )	/* (c) 1994 American Sammy */
 	DRIVER( extdwnhl )	/* (c) 1995 Sammy Japan */
+#endif
 	DRIVER( gundhara )	/* (c) 1995 Banpresto */
-	DRIVER( sokonuke )	/* (c) 1995 Sammy Industries */
 	DRIVER( zombraid )	/* (c) 1995 American Sammy */
+#if 0
+	DRIVER( sokonuke )	/* (c) 1995 Sammy Industries */
 
 	DRIVER( gundamex )	/* (c) 1994 Banpresto */
 	DRIVER( grdians )	/* (c) 1995 Banpresto */
@@ -5100,7 +5106,9 @@ Other Sun games
 	DRIVER( rougien )	/* (c) 1982 Sanritsu */
 	DRIVER( drmicro )	/* (c) 1983 Sanritsu */
 	DRIVER( appoooh )	/* (c) 1984 Sega */	/* made by Sanritsu */
+#endif
 	DRIVER( bankp )		/* (c) 1984 Sega */	/* made by Sanritsu */
+#if 0
 	DRIVER( mjkjidai )	/* (c) 1986 Sanritsu */
 	DRIVER( mayumi )	/* (c) 1988 Victory L.L.C. */	/* made by Sanritsu */
 #endif

@@ -202,7 +202,7 @@ SOUNDS+=VLM5030@
 SOUNDS+=ADPCM@
 SOUNDS+=OKIM6295@
 SOUNDS+=MSM5205@
-#SOUNDS+=MSM5232@
+SOUNDS+=MSM5232@
 SOUNDS+=UPD7759@
 SOUNDS+=HC55516@
 #SOUNDS+=K005289@
@@ -331,6 +331,12 @@ SOURCES_C += $(CORE_DIR)/vidhrdw/dkong_vidhrdw.c $(CORE_DIR)/sndhrdw/dkong_sndhr
 				 $(CORE_DIR)/machine/mcr.c $(CORE_DIR)/sndhrdw/mcr_sndhrdw.c \
 				 $(CORE_DIR)/vidhrdw/mcr3_vidhrdw.c $(CORE_DIR)/drivers/mcr3.c \
 				 $(CORE_DIR)/vidhrdw/rockola_vidhrdw.c $(CORE_DIR)/sndhrdw/rockola_sndhrdw.c $(CORE_DIR)/drivers/rockola.c \
+				 $(CORE_DIR)/vidhrdw/bankp_vidhrdw.c $(CORE_DIR)/drivers/bankp.c \
+				 $(CORE_DIR)/machine/nycaptor_machine.c $(CORE_DIR)/vidhrdw/nycaptor_vidhrdw.c $(CORE_DIR)/drivers/nycaptor.c \
+				 $(CORE_DIR)/vidhrdw/rastan_vidhrdw.c $(CORE_DIR)/sndhrdw/rastan_sndhrdw.c $(CORE_DIR)/drivers/rastan.c \
+				 $(CORE_DIR)/machine/rainbow_machine.c $(CORE_DIR)/drivers/rainbow.c \
+				 $(CORE_DIR)/drivers/opwolf.c \
+				 $(CORE_DIR)/sndhrdw/gyruss_sndhrdw.c $(CORE_DIR)/vidhrdw/gyruss_vidhrdw.c $(CORE_DIR)/drivers/gyruss.c \
 				 $(CORE_DIR)/vidhrdw/crtc6845.c \
 				 $(CORE_DIR)/drivers/simpl156.c \
 				 $(CORE_DIR)/machine/cchip.c \

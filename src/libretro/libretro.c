@@ -123,8 +123,9 @@ static int driverIndex; // Index of mame game loaded
 
 extern const struct KeyboardInfo retroKeys[];
 extern int retroKeyState[512];
-
-extern int retroJsState[64];
+extern int retroJsState[72];
+extern int16_t mouse_x[4];
+extern int16_t mouse_y[4];
 extern int16_t analogjoy[4][4];
 extern struct osd_create_params videoConfig;
 
@@ -314,7 +315,18 @@ void retro_run (void)
       {
          *jsState++ = input_cb(i, RETRO_DEVICE_JOYPAD, 0, j);
       }
-
+      
+      /* Mouse / Lightgun buttons */
+      *jsState++ = input_cb(i, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_LEFT);
+      *jsState++ = input_cb(i, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_RIGHT);
+#ifdef GEKKO
+      // In GEKKO, then position is absolute for mouse and lightgun.
+      mouse_x[i] = input_cb(i, RETRO_DEVICE_LIGHTGUN, 0, RETRO_DEVICE_ID_LIGHTGUN_X);
+      mouse_y[i] = input_cb(i, RETRO_DEVICE_LIGHTGUN, 0, RETRO_DEVICE_ID_LIGHTGUN_Y);
+#else
+      mouse_x[i] = input_cb(i, RETRO_DEVICE_LIGHTGUN, 0, 13); //RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X
+      mouse_y[i] = input_cb(i, RETRO_DEVICE_LIGHTGUN, 0, 14); //RETRO_DEVICE_ID_LIGHTGUN_SCREEN_Y
+#endif
       /* Analog joystick */
       analogjoy[i][0] = input_cb(i, RETRO_DEVICE_ANALOG, RETRO_DEVICE_INDEX_ANALOG_LEFT, RETRO_DEVICE_ID_ANALOG_X);
       analogjoy[i][1] = input_cb(i, RETRO_DEVICE_ANALOG, RETRO_DEVICE_INDEX_ANALOG_LEFT, RETRO_DEVICE_ID_ANALOG_Y);
